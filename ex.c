@@ -13,7 +13,7 @@ tp_item josephus(tp_listase **l, int gap){
     atu->prox = *l;
     atu = atu->prox;
     while(a>1){
-        for(i = 0; i<gap;i++){
+        for(i = 1; i<gap;i++){
             ant = atu;
             atu = atu->prox;
         }
@@ -32,10 +32,5 @@ int main(){
     insere_listase_no_fim(&l, 5);
     insere_listase_no_fim(&l, 6);
     insere_listase_no_fim(&l, 8); 
-    insere_listase_no_fim(&l, 3); 
-    insere_listase_no_fim(&l, 7); 
-    insere_listase_no_fim(&l, 1); 
-    insere_listase_no_fim(&l, 9); 
-    insere_listase_no_fim(&l, 8); 
-    printf("%d", josephus(&l,3));
+    printf("%d", josephus(&l,2));
 }
